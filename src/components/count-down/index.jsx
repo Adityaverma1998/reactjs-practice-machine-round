@@ -1,9 +1,15 @@
+// Build a Countdown Timer: Develop a countdown timer component that starts from a specified time and decrements until it reaches zero.
+
 import React, { useEffect,useState } from "react";
 const CountDown = ()=>{
 
+
+    // calculate total seconds
     const initialTime = 60 * 5;
 
-    const [timeRemaining, setTimeRemaining] = useState(initialTime);
+
+    // set timerRemaining 
+     const [timeRemaining, setTimeRemaining] = useState(initialTime);
 
     useEffect(()=>{
 
@@ -11,7 +17,7 @@ const CountDown = ()=>{
             setTimeRemaining((prev)=>{
                 if(prev===0){
                     clearInterval(timerInterval);
-                              // Perform actions when the timer reaches zero
+                 // Perform actions when the timer reaches zero
                     console.log('Countdown complete!');
                     return 0;
  
