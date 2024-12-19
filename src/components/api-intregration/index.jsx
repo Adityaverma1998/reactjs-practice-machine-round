@@ -14,6 +14,7 @@ const ApiIntregration = ()=>{
                 const result = await fetch(url); 
                 if(result.ok){
                     const data = await result.json();
+                    data.sort((a,b)=> a.price-b.price);
                     setProducts(data)
                 } 
              } catch (error) {
